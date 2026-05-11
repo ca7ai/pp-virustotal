@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "api_name": "virustotal",
+  "run_id": "20260511T001241Z-7bc61579",
+  "research_completed_at": "2026-05-10T19:19:35Z",
+  "absorbed_features": [],
+  "novel_features": [
+    {
+      "id": "vtstore",
+      "name": "Local Intelligence Store",
+      "type": "data_layer",
+      "description": "Persistent SQLite cache with FTS5 full-text search across all IOCs and relationship tracking for graph workflows",
+      "novelty_claim": "No existing VirusTotal CLI (official or community) offers persistent local storage with full-text search and relationship graph",
+      "files": ["internal/vtstore/vtstore.go"]
+    },
+    {
+      "id": "pivot",
+      "name": "Pivot Workflows",
+      "type": "workflow",
+      "description": "BFS graph traversal across IOC relationships (file→domain→IP→file chains) with cycle detection and Mermaid diagram output",
+      "novelty_claim": "Official VirusTotal CLI does not support graph traversal. Community CLIs support only direct relationships, not multi-hop pivoting.",
+      "files": ["internal/cli/pivot.go"]
+    },
+    {
+      "id": "enrich",
+      "name": "Batch IOC Enrichment Pipeline",
+      "type": "workflow",
+      "description": "Concurrent batch processor with auto-type detection, worker pool, progress tracking, and structured summary report",
+      "novelty_claim": "No existing VirusTotal CLI offers batch processing with auto-detection and concurrency management",
+      "files": ["internal/cli/enrich.go"]
+    },
+    {
+      "id": "llm-format",
+      "name": "LLM-Native Output",
+      "type": "output",
+      "description": "--llm flag restructures JSON responses with natural language summaries, threat context, and tool-calling suggestions optimized for LLM consumption",
+      "novelty_claim": "No existing VirusTotal CLI offers LLM-optimized output format",
+      "files": ["internal/cli/llm_format.go", "internal/cli/helpers.go"]
+    },
+    {
+      "id": "diff",
+      "name": "Threat Detection Diff",
+      "type": "workflow",
+      "description": "Compares detection results between two scans to surface vendor disagreements, new detections, and classification changes",
+      "novelty_claim": "No existing VirusTotal CLI offers detection comparison between scans",
+      "files": ["internal/cli/diff.go"]
+    }
+  ]
+}

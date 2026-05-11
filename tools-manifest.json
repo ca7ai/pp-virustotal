@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "mcp_binary": "virustotal-pp-mcp",
+  "total_tools": 7,
+  "public_tools": 0,
+  "auth_required_tools": 7,
+  "tools": [
+    {
+      "name": "domains_get",
+      "description": "Retrieve information about a domain",
+      "required_params": ["domain"],
+      "optional_params": [],
+      "auth_required": true,
+      "read_only": true
+    },
+    {
+      "name": "files_get",
+      "description": "Retrieve scan results for a file hash",
+      "required_params": ["id"],
+      "optional_params": [],
+      "auth_required": true,
+      "read_only": true
+    },
+    {
+      "name": "files_scan",
+      "description": "Submit a file for scanning",
+      "required_params": [],
+      "optional_params": ["file"],
+      "auth_required": true,
+      "read_only": false
+    },
+    {
+      "name": "ip-addresses_get-ip-address",
+      "description": "Retrieve information about an IP address",
+      "required_params": ["ip"],
+      "optional_params": [],
+      "auth_required": true,
+      "read_only": true
+    },
+    {
+      "name": "urls_get",
+      "description": "Retrieve scan results for a URL",
+      "required_params": ["id"],
+      "optional_params": [],
+      "auth_required": true,
+      "read_only": true
+    },
+    {
+      "name": "urls_scan",
+      "description": "Submit a URL for scanning",
+      "required_params": [],
+      "optional_params": ["url"],
+      "auth_required": true,
+      "read_only": false
+    },
+    {
+      "name": "virustotal-search_search",
+      "description": "Search using VirusTotal query syntax",
+      "required_params": ["query"],
+      "optional_params": [],
+      "auth_required": true,
+      "read_only": true
+    }
+  ]
+}

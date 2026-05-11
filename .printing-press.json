@@ -2,10 +2,13 @@
   "schema_version": 1,
   "generated_at": "2026-05-10T19:19:35.612985Z",
   "printing_press_version": "4.2.2",
+  "run_id": "20260511T001241Z-7bc61579",
+  "printer": "claude-sonnet-4.5",
+  "printer_name": "claude-sonnet-4.5",
   "api_name": "virustotal",
-  "display_name": "Virustotal",
+  "display_name": "VirusTotal",
   "cli_name": "virustotal-pp-cli",
-  "owner": "user",
+  "owner": "ca7ai",
   "spec_path": "/Users/cal/printing-press/.runstate/virustotal-cli-ca962668/runs/20260510T182716Z-e68b0dda/virustotal-minimal.yaml",
   "spec_format": "openapi3",
   "spec_checksum": "sha256:c62824f6db85076fb433b75af24c1c167fd06c850ab40460634643f8f54ea8bd",
@@ -16,5 +19,16 @@
   "auth_type": "api_key",
   "auth_env_vars": [
     "VIRUSTOTAL_API_KEY"
-  ]
+  ],
+  "steinberger_score": 81,
+  "transcendence_features": [
+    "vtstore",
+    "pivot",
+    "enrich",
+    "llm-format",
+    "diff"
+  ],
+  "transcendence_catalog": "TRANSCENDENCE.md",
+  "phase5_dogfood": "quick",
+  "phase5_acceptance": true
 }
